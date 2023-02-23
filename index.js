@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('express-handlebars')
 const {clientRouter} = require("./routers/client");
 const {homeRouter} = require("./routers/home");
+const {db} = require('./utils/db');
 
 const app = express();
 
@@ -19,7 +20,12 @@ app.set('view engine', '.hbs');
 
 app.use('/',homeRouter);
 app.use('/client',clientRouter);
-
+app.get('/test',(req,res)=> {
+    db.update('c293d482-67be-4609-ad69-c22985ab1246',{
+        name:'Tester'
+    });
+    res.send('ok')
+});
 
 
 app.listen(3000,'localhost',()=> {
