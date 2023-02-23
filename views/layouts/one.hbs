@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="gray-header">Customer: {{client.name}}</h2>
+</div>
+<div class="container one-customer">
+    <table>
+        <tbody>
+        <tr>
+            <th class="gray-header">
+                Email:
+            </th>
+            <td>
+                <a href="mailto:{{client.mail}}" target="_blank">{{client.mail}}</a>
+            </td>
+        </tr>
+        <tr>
+            <th class="gray-header">
+                Next contact date:
+            </th>
+            <td>
+                {{client.next}}
+            </td>
+        </tr>
+        {{#if client.notes}}
+            <tr>
+                <th class="gray-header">
+                    Note:
+                </th>
+                <td>
+                    {{client.notes}}
+                </td>
+            </tr>
+        {{/if}}
+        </tbody>
+    </table>
+</div>
