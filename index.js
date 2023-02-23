@@ -21,10 +21,7 @@ app.set('view engine', '.hbs');
 app.use('/',homeRouter);
 app.use('/client',clientRouter);
 app.get('/test',(req,res)=> {
-    db.update('c293d482-67be-4609-ad69-c22985ab1246',{
-        name:'Tester'
-    });
-    res.send('ok')
+    db.getOne('c293d482-67be-4609-ad69-c22985ab1246'.name)
 });
 
 
