@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('express-handlebars')
 const {clientRouter} = require("./routers/client");
+const {homeRouter} = require("./routers/home");
 
 const app = express();
 
@@ -16,7 +17,9 @@ app.engine('.hbs', hbs.engine({
 }));
 app.set('view engine', '.hbs');
 
+app.use('/',homeRouter);
 app.use('/client',clientRouter);
+
 
 
 app.listen(3000,'localhost',()=> {
