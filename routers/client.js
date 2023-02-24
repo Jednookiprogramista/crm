@@ -22,7 +22,7 @@ clientRouter
         res.send('Modify!');
     })
     .delete('/:id',(req,res)=> {
-        res.send('Delete!');
+        db.delete(req.params.id);
     })
 
 module.exports = {

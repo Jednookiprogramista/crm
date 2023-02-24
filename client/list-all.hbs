@@ -14,6 +14,9 @@
             <th>
                 Next contact date:
             </th>
+            <th>
+
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -28,8 +31,19 @@
                 <td>
                     {{this.next}}
                 </td>
+                <td>
+                    <form method="POST" action="/client/deleted/{{this.id}}?_method=DELETE">
+                        <a class="btn btn-outline-success" href="/client/{{this.id}}">Details</a>
+                        <button type="submit" class="btn btn-outline-danger">Delete</button>
+                    </form>
+                </td>
             </tr>
         {{/each}}
         </tbody>
     </table>
+    <div>
+        <form method="GET" action="client/form/add">
+            <button type="submit" class="btn btn-outline-success btn-lg large-button" >Add new customer</button>
+        </form>
+    </div>
 </div>
