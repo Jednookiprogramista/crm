@@ -16,10 +16,12 @@ clientRouter
         });
     })
     .post('/',(req,res)=> {
-        db.create(req.body);
+        const id = db.create(req.body);
+
+
         res.render('client/added',{
             name:req.body.name,
-
+            id,
         });
     })
     .put('/:id',(req,res)=> {
