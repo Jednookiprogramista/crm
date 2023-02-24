@@ -1,0 +1,38 @@
+<div class="container">
+    <h2 class="gray-header">Adding a new customer to the database.</h2>
+    <form method="post" action="/client">
+        <div class="form">
+            <label>
+                <p>
+                    Email:
+                </p>
+                <p>
+                    <input type="email" name="mail">
+                </p>
+            </label>
+            <label for="">
+                <p>
+                    Name:
+                </p>
+                <p>
+                    <input type="text" name="name">
+                </p>
+            </label>
+            <label for="">
+                <p>
+                    Next contact date:
+                </p>
+                <p>
+                    <input type="date" name="next">
+                </p>
+            </label>
+            <p>
+                Note:
+            </p>
+            <p>
+                <textarea name="notes" id="" cols="30" rows="10"></textarea>
+            </p>
+            <button type="submit" class="btn btn-success">Add to database</button>
+        </div>
+    </form>
+</div>
