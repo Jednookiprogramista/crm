@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <th class="gray-header">
-                Next contact date:
+                Date of the next contact:
             </th>
             <td>
                 {{client.next}}
@@ -32,14 +32,7 @@
         {{/if}}
         </tbody>
     </table>
+    <a class="btn btn-success btn-lg large-button" href="/client">Return to the list of customers.</a>
+    <a class="btn btn-outline-success btn-lg large-button" href="http://localhost:3000/
+client/form/edit/{{client.id}}">Edit!</a>
 </div>
-
-<form  method="GET" action="client/form/edit/{{client.id}}">
-    <button type="submit" class="btn btn-outline-success btn-lg large-button" >Edit data of client</button>
-</form>>
-
-</form>
-
-<p>
-    {{> go-to-clients}}
-</p>
